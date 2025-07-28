@@ -1,5 +1,15 @@
 # Persona-Driven Document Intelligence
 
+---
+
+## 🔗 Docker Hub
+
+You can pull and run the image directly from Docker Hub:
+
+➡️ [adityapatil7730/1b on Docker Hub](https://hub.docker.com/repository/docker/adityapatil7730/1b/general)
+
+---
+
 This project provides a practical, persona-focused approach to extracting meaningful, actionable content from PDF documents. It is especially useful for professionals seeking to surface only the most relevant sections from large documentation sets, tailored to their specific job and role.
 
 ---
@@ -186,12 +196,4 @@ The output will appear in the `output/` directory as JSON files.
 * Set memory limits with `--memory 2g`
 * Use temporary storage with `--tmpfs /tmp:rw,size=1g`
 
----
 
-## 🔗 Docker Hub
-
-You can pull and run the image directly from Docker Hub:
-
-➡️ [adityapatil7730/1b on Docker Hub](https://hub.docker.com/repository/docker/adityapatil7730/1b/general)
-
----
