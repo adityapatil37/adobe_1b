@@ -60,31 +60,29 @@ The system combines natural language processing (NLP) with semantic similarity t
 ### Dockerfile
 
 ```dockerfile
-FROM python:3.10-slim
-
-RUN apt-get update && apt-get install -y \
-    build-essential \
-    libgl1 \
-    libglib2.0-0 \
-    libsm6 \
-    libxext6 \
-    poppler-utils \
-    && rm -rf /var/lib/apt/lists/*
+FROM python:3.11-slim
 
 WORKDIR /app
 
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-
-RUN python -m spacy download en_core_web_md
+RUN apt-get update && \
+    apt-get install -y \
+    build-essential \
+    libglib2.0-0 \
+    libsm6 \
+    libxext6 \
+    libxrender-dev \
+    poppler-utils \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 COPY . .
-RUN mkdir -p /app/documents /app/output
 
-ENV PERSONA=""
-ENV JOB=""
+RUN pip install -r requirements.txt
 
-ENTRYPOINT ["python", "main.py"]
+# RUN python -m spacy download en_core_web_md --direct
+
+RUN mkdir -p documents output
+
+CMD ["python", "main.py"]
 ```
 
 ### requirements.txt
