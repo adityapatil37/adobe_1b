@@ -195,17 +195,3 @@ You can pull and run the image directly from Docker Hub:
 ➡️ [adityapatil7730/1b on Docker Hub](https://hub.docker.com/repository/docker/adityapatil7730/1b/general)
 
 ---
-
-## 🤝 Contributing & Feedback
-
-This project is a work in progress and welcomes contributions, suggestions, or bug reports. Feel free to fork it or raise an issue if you find something that can be improved.
-
----
-
-## 🙌 Acknowledgments
-
-Built with ❤️ using open-source NLP libraries and inspired by real-world document processing needs.
-
----
-
-Thank you for checking out this project. We hope it helps streamline your document workflows in a meaningful way!
