@@ -78,8 +78,6 @@ COPY . .
 
 RUN pip install -r requirements.txt
 
-# RUN python -m spacy download en_core_web_md --direct
-
 RUN mkdir -p documents output
 
 CMD ["python", "main.py"]
@@ -120,23 +118,13 @@ cp /path/to/your/pdfs/*.pdf documents/
 ### Step 4: Run the Container
 
 ```bash
-docker run -it --rm \
-  -e PERSONA="[Your Persona]" \
-  -e JOB="[Your Job Description]" \
-  -v $(pwd)/documents:/app/documents \
-  -v $(pwd)/output:/app/output \
-  adityapatil7730/1b
+docker run -it   -e PERSONA="Financial Analyst"   -e JOB="Evaluate Q3 earnings report"   -v ./documents:/app/documents   -v ./output:/app/output   1b
 ```
 
 ### Example
 
 ```bash
-docker run -it --rm \
-  -e PERSONA="Financial Analyst" \
-  -e JOB="Evaluate Q3 earnings report" \
-  -v $(pwd)/documents:/app/documents \
-  -v $(pwd)/output:/app/output \
-  adityapatil7730/1b
+docker run -it   -e PERSONA="Financial Analyst"   -e JOB="Evaluate Q3 earnings report"   -v ./documents:/app/documents   -v ./output:/app/output   1b
 ```
 
 ---
